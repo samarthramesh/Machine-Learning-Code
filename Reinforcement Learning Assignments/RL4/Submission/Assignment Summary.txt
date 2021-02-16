@@ -1,0 +1,1 @@
+The code for plotting of all the questions is saved in plot.py. The EXP3 algorithm is implimented in algorithms\myexp3\myexp3.py. All the plots are saved in the Plots folder.
