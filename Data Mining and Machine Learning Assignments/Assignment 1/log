@@ -1,0 +1,48 @@
+F = 0.05
+K = 10
+1
+Number of frequent sets: 282
+2
+Number of candidates: 39621
+Number of frequent sets: 18
+3
+Number of candidates: 13
+Number of frequent sets: 0
+Running Time: 388.97860884666443 seconds
+
+
+F = 0.04
+K = 10
+1
+Number of frequent sets: 419
+2
+Number of candidates: 87571
+Number of frequent sets: 120
+3
+Number of candidates: 407
+Number of frequent sets: 3
+4
+Number of candidates: 0
+Number of frequent sets: 0
+Running Time: 838.7944617271423 seconds
+
+
+F = 0.03
+K = 10
+1
+Number of frequent sets: 627
+2
+Number of candidates: 196251
+Number of frequent sets: 980
+3
+Number of candidates: 12186
+Number of frequent sets: 63
+4
+Number of candidates: 51
+Number of frequent sets: 2
+5
+Number of candidates: 0
+Number of frequent sets: 0
+Running Time: 1959.8040359020233 seconds
+
+

@@ -1,0 +1,41 @@
+DMML ASSIGNMENT 1
+Submission: 29th September, 2019
+
+Ekanshdeep Gupta, BMC201710
+Samarth Ramesh, BMC201722
+
+(The output is stored at the GitHub repository https://github.com/EkanshdeepGupta/frequent-itemsets)
+
+ABOUT THE PROGRAM
+
+We created a Python3 program to compute Frequent Itemsets using the Apriori Algorithm on the Bag of Words dataset: http://archive.ics.uci.edu/ml/datasets/Bag+of+Words
+
+We read as input the bag of words and computed frequent itemsets of size upto 10 for different frequencies for the three datasets: Kos, Enron Emails & NIPS full papers.
+
+PARAMETERS
+
+For the different datasets, we used different frequencies:
+
+- For Kos, we used the frequencies 0.5, 0.4, 0.3, 0.25, 0.2, 0.15, 0.1
+- For Enron, we used the frequencies 0.5, 0.4, 0.3, 0.2, 0.15, 0.1, 0.05, 0.04, 0.03
+- For NIPS, we used the frequencies 0.95, 0.9, 0.85, 0.8, 0.75, 0.7, 0.65, 0.6, 0.55, 0.5, 0.45
+
+For each frequency, the number of frequent itemsets, running time and the itemsets are all stored in the corresponding output files.
+
+LIBRARIES
+
+- math: for math.ceil function
+- time: for measuring running time
+- copy: to make copies of mutable data types.
+
+ANALYSIS OF THE OUTPUT
+
+We have fixed K to be 10. For almost all the frequencies, we observed that some frequent itemsets of size k < 10 were empty. 
+
+For different datasets, we found that different frequencies were of interest. For Kos, at frequency 0.5, we only found 1 frequent itemset of size 1. Whereas, for NIPS even at frequency 0.95 we found frequent itemsets. On the other hand, we had to lower the frequency all the way to 0.15 for Enron to get any itemsets. We think the above behaviour is explained by the nature of the datasets themselves.
+
+Kos is a dataset of US-based daily news articles during the 2004 US presidential elections. This is reflected by the occurence of words like "Bush", "Kerry", "democracy", "general", "war", etc. Since many of the articles followed a similar theme, we found frequent itemsets from frequency 0.5. By 0.1, the information wasn't meaningful.
+
+NIPS dataset consists of entire research papers from the conference on Neural Information Processing Systems. Since the size of the documents themselves was much larger, and most papers have common words like "references", "abstract", "neural", "function", "result" etc, we found frequent itemsets at much higher frequencies, starting at 0.95. We lowered the frequencies till 0.45, at which point we got 78,399 5-sized frequent itemsets. 
+
+The Enron dataset consists of e-mails of the Enron Corporation which were released to the public during the investigation by the FERC after the company's collapse. Since e-mails are much smaller, and much more varied in content, we expected the meaningful frequencies to be much lower. As such, we found the first frequent itemsets at frequency 0.15. They were common corporate jargon like "attached", "market", "meeting", "number", "think" etc. Due to the sheer size of the dataset, computation was very slow. We lowered the frequency down to 0.3 at which point the computation was too time-consuming to be carried on.
